@@ -1,0 +1,72 @@
+[ 
+    {
+        "appName": "Youtube",
+        "bandwidth": "20 Mbps",
+        "deviceCount": "5",
+        "loggedTime" : "02/10/2017 10:51 AM",
+        "isConnected" : false,
+        "deviceTopN":"Acer",
+        "device": [
+            {"name" : "Swipe Elite Max Phone", "data": "335", "unit":"MB" },                
+            {"name" : "Dell System", "data": "135", "unit":"MB" },                
+            {"name" : "Micromax Laptop", "data": "75", "unit":"MB" },                
+            {"name" : "Samsung Laser Printer", "data": "35", "unit":"MB" },                
+            {"name" : "Acer", "data": "1350", "unit":"MB" }
+        ]
+    },
+     {
+        "appName": "Facebook",
+        "bandwidth": "22 Mbps",
+        "deviceCount": "4",
+        "loggedTime" : "02/17/2017 12:10 AM",
+        "isConnected" : true,
+        "deviceTopN":"Samsung Tablet",
+        "device": [
+            {"name" : "iPhone", "data": 22, "unit":"MB" },            
+            {"name" : "Samsung Tablet", "data": 37, "unit":"MB" },
+            {"name" : "HCL System", "data": 77, "unit":"MB" },
+            {"name" : "Canon Pixma Printer", "data": 88, "unit":"MB" }
+        ]
+    },
+     {
+        "appName": "Twitter",
+        "bandwidth": "40 Mbps",
+        "deviceCount": "5",
+        "loggedTime" : "03/22/2017 11:51 PM",
+        "isConnected" : false,
+        "deviceTopN":"PS4",
+        "device": [
+            {"name" : "Moto Phone", "data": 32, "unit":"MB" },            
+            {"name" : "HP Laptop", "data": 21, "unit":"MB" },
+            {"name" : "Dell System", "data": 43, "unit":"MB" },
+            {"name" : "PS4", "data": 20, "unit":"MB" },
+            {"name" : "Sony Phone", "data": 200, "unit":"MB" }
+        ]
+    }, {
+        "appName": "Google",
+        "bandwidth": "10 Mbps",
+        "deviceCount": "3",
+        "loggedTime" : "02/01/2017 02:20 PM",
+        "isConnected" : true,
+        "deviceTopN":"Micromax Phone",
+        "device": [
+            {"name" : "Mi Phone", "data": 50, "unit":"MB" },            
+            {"name" : "Lenovo Laptop", "data": 40, "unit":"MB" },
+            {"name" : "HP System", "data": 70, "unit":"MB" }
+        ]
+    }, {
+        "appName": "Torrents",
+        "bandwidth": "32 Mbps",
+        "deviceCount": "5",
+        "loggedTime" : "03/09/2017 05:30 PM",
+        "isConnected" : false,
+        "deviceTopN":"XOLO Phone",
+        "device": [
+            {"name" : "Apple Phone", "data": 100, "unit":"MB" },            
+            {"name" : "Micromax Laptop", "data": 65, "unit":"MB" },
+            {"name" : "Acer Tablet", "data": 87, "unit":"MB" },
+            {"name" : "HP Laser Printer", "data": 26, "unit":"MB" },
+            {"name" : "XOLO Phone", "data": 70, "unit":"MB" }
+        ]
+    }
+]

@@ -1,0 +1,145 @@
+
+    <div ng-controller="mainCtrl" class="networkSection">
+      <div class="titlePane container">
+        <h1 class="mainTitle">Digital Home Network</h1>
+        <div class="titleRight">
+          <a href="javascript:;" data-toggle="popover" class="userPopover">
+              <button type="button" class="btn btn-default btn-sm userPopupBtn popupBtn">
+                <span class="glyphicon glyphicon-user"></span> User 
+              </button>
+          </a>
+          <button type="button" class="btn btn-default logoutBtn btn-sm">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="nav nav-tabs navTabs">
+          <li class="active"><a data-toggle="tab" data-target="#isp" href="javascript:;">ISP</a></li>
+          <li><a data-toggle="tab" data-target="#device" href="javascript:;">Devices</a></li>
+          <li><a data-toggle="tab" data-target="#application" href="javascript:;" onClick="setTimeout(function(){ window.dispatchEvent(new Event('resize')); },300);">Application</a></li>
+        </ul> 
+
+        <div class="alert alert-success mainSuccess mainAlert" style="display:none">   
+          <a href="javascript:;" class="close" aria-label="close" title="close" onclick="$('.mainSuccess').hide();">×</a> 
+          <strong class="mainSuccessText">Password Reset Successful</strong>
+        </div>  
+
+        <div class="tab-content" style="">       
+          <div id="isp" class="tab-pane fade in active">   
+            <div ng-include="'./js/template/ispTemplate.html'" onload="ispFinishLoading()"></div>
+          </div>     
+          <div id="device" class="tab-pane fade">  
+            <div ng-include="'./js/template/deviceTemplate.html'" onload="deviceFinishLoading()"></div> 
+          </div>     
+          <div id="application" class="tab-pane fade">  
+            <div ng-include="'./js/template/appTemplate.html'" onload="appFinishLoading()"></div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h1 class="text-center">Reset Password</h1>
+          </div>
+          <div class="modal-body">
+              <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center">                              
+                                <div class="panel-body">
+                                    <fieldset>
+                                      <div class="alert alert-success resetSuccess resetAlert" style="display:none">   
+                                        <a href="javascript:;" class="close" aria-label="close" title="close" onclick="$('.resetSuccess').hide();">×</a> 
+                                        <strong class="resetSuccessText">Password Reset Successful</strong>
+                                      </div>
+                                     <form action="javascript:;" method="post" class="form-signin resetModalForm"> 
+                                        <!--<div class="form-group">
+                                            <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email" required>
+                                        </div> -->
+                                        <div class="form-group">
+                                            <input class="form-control input-lg cPwd" placeholder="Current Password" name="cPwd" type="text" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control input-lg rPwd" placeholder="New Password" name="rPwd" type="text" required>
+                                        </div>
+                                        <input class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
+                                      </form>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="modal-footer">
+              <div class="col-md-12">
+              <button class="btn closeResetModal" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>  
+          </div>
+      </div>
+      </div>
+    </div>
+
+<script>
+$(document).ready(function() {
+
+  window.sessionObj = window.sessionObj || JSON.parse( localStorage.getItem("sessionObj") ) || {"isLogged":false};  
+  if(!window.sessionObj.isLogged){
+    window.location.href = "#login";
+    return false;
+  }
+  setTimeout(function() {
+      $(".loading").hide();
+      window.dispatchEvent(new Event('resize'));
+  }, 300);
+  $(".logoutBtn").click(function() {  
+      $(".loading").show();
+      updateSession();
+      window.location.href = "#login";
+      $('.loginInfo').show();
+      $(".loginInfoText").text("Logout Successfully");
+      // $(".loginSection").show();
+      // $(".networkSection").hide();
+  });
+
+  $('.userPopover').popover({
+      title: "User Details",
+      content: "<b>Username : </b>"+window.sessionObj.user+" <br/> <b>Last logged in :</b><br/> "+window.sessionObj.lastLogged+" <br/> "
+          +"<a class='resetPwdBtn' data-target='#pwdModal' data-toggle='modal' onclick=$('.userPopover').trigger('click')>Reset password</a>",
+      html: true,
+      placement: "bottom"
+  });
+  $('body').on('click', function (e) {
+      $('[data-toggle=popover]').each(function () {
+          // hide any open popovers when the anywhere else in the body is clicked
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              if( $(this).attr("aria-describedby") ){
+                $(this).trigger("click");
+              }
+          }
+      });
+  })
+
+  $(".resetModalForm").submit(function(){
+    $(".resetSuccess").show();
+    $(".resetSuccessText").text("Password Reset Successful");
+    //$(".closeResetModal").trigger("click");
+   // $(".mainSuccess").show();
+    //$(".mainSuccessText").text("Password reset link send to your Mail Successfully");
+  });
+
+  function updateSession(userName){
+    window.sessionObj.isLogged = false;
+    window.sessionObj.user = "";
+    window.sessionObj.lastLogged = window.sessionObj.currentLogged;
+    localStorage.setItem("sessionObj", JSON.stringify(sessionObj));
+  }
+
+});
+
+</script>

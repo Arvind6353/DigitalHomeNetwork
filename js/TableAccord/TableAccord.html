@@ -1,0 +1,38 @@
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th ng-repeat="head in tableAccordDetails.layout">
+            <a href="javascript:;" ng-click="sortClick($event, head)" ng-class="{ 'upArrow': sortReverse && sortType==(head.field), 'downArrow': !sortReverse && sortType==(head.field) }" >{{head.name}} </a> 
+          </th>
+        </tr>
+        <tr>
+          <th ng-repeat="head in tableAccordDetails.layout">
+            <input class="tableSearchInput" ng-model="disSearch[head.field]"/>
+          </th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="row in tableAccordArr | filter:disSearch | dateFilter:tableAccordDetails.startDate:tableAccordDetails.endDate:this | orderBy:sortType:sortReverse">
+        <tr ng-click="expandRow($event, row)">
+          <td ng-class="{'tdRightArrow tdFirst':$first}" ng-repeat="head in tableAccordDetails.layout">{{ row[head.field] }}</td>
+        </tr>
+        <tr class="innerTr">  
+          <td colspan="{{objLength}}">
+            <div class="innerDiv" ng-class="'innerDivWrapper'+$id">
+              <div ng-include="tableAccordDetails.innerDivHtml" onload="tableAccordDetails.innerDivScript(row, $index, tableAccordDetails.layout, $id, this);"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody class="accordNoData">
+        <tr>  
+          <td colspan="{{objLength}}">
+            <div ng-class="'innerDivWrapper'+$id">
+              No Data Available
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>

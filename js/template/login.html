@@ -1,0 +1,70 @@
+
+<div class="container loginSection">
+  <form action="#main" method="post" class="form-signin loginWrapper col-sm-12">  
+      <div class="col-sm-2">     
+      </div>
+      <div class="col-sm-4 loginImg">     
+      </div>
+      <div class="loginCont col-sm-6">     
+        <h3 class="form-signin-heading">Welcome to Digital Home Network</h3> 
+        <div class="alert alert-danger loginErr loginAlert">   
+          <a href="javascript:;" class="close" aria-label="close" title="close" onclick="$('.loginErr').hide();">×</a> 
+          <strong class="loginErrText">Error Msg</strong>
+        </div>           
+        <div class="alert alert-info loginInfo loginAlert">   
+          <a href="javascript:;" class="close" aria-label="close" title="close" onclick="$('.loginInfo').hide();">×</a> 
+          <strong class="loginInfoText">Error Msg</strong>
+        </div>           
+        <input type="text" class="form-control loginInput loginUser" name="Username" placeholder="Username" required autofocus>
+        <input type="password" class="form-control loginInput loginPwd" name="Password" placeholder="Password" required>              
+        <button class="btn btn-lg btn-default btn-block loginBtn" value="Login" type="submit">Login</button>
+      </div>
+  </form>  
+</div>
+
+<script>
+$(document).ready(function() {
+  window.sessionObj = localStorage.getItem("sessionObj") ? JSON.parse( localStorage.getItem("sessionObj") ) : {"isLogged":false}; 
+  /* if(window.sessionObj.isLogged){
+    window.location.href = "#main";
+    return false;
+  }*/
+  /* To clear all intervals */
+ for(var i=0; i<window.intervals.length; i++){
+      clearInterval(window.intervals[i]);
+  }
+  $(".loading").hide();
+
+  $(".loginWrapper").submit(function(e) {
+      e.preventDefault();
+      var loginUser = $(".loginUser").val();
+      var loginPwd = $(".loginPwd").val();
+      if (loginUser != "admin" || loginPwd != "admin") {
+          $('.loginInfo').hide();
+          $(".loginErr").show();
+          $(".loginErrText").text("Incorrect Credentials");
+          return false;
+      }
+      // $(".loginSection").hide();
+      // $(".networkSection").show();
+      //Reset Login Form
+      $(".loginWrapper")[0].reset();
+      $(".loginErr").hide();
+
+      $(".loading").show();
+      setSession(loginUser);
+      window.location.href = "#main";
+  });
+
+  function setSession(userName){
+    var today = (new Date()).toUTCString();
+    window.sessionObj.isLogged = true;
+    window.sessionObj.user = userName;
+    window.sessionObj.lastLogged = window.sessionObj.lastLogged || today;
+    window.sessionObj.currentLogged = today;
+    localStorage.setItem("sessionObj", JSON.stringify(sessionObj));
+  }
+
+});
+
+</script>

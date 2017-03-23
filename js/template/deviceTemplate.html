@@ -1,0 +1,41 @@
+
+<div class="deviceSection1 deviceSection">
+  <form class="form-horizontal">
+    <div class="form-group col-sm-3">
+      <label class="control-label col-sm-5" for="email">Status:</label>
+      <div class="col-sm-7">        
+        <select class="form-control connectDeviceStatus" id="sel1">
+          <option value="">All</option>
+          <option value="Connected">Connected</option>
+          <option value="Disconnect">Disconnected</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-sm-3">
+      <label class="control-label col-sm-3" for="email">From:</label>
+      <div class='input-group date col-sm-9' id='datetimepicker1'>
+          <input type='text' class="form-control" placeholder="mm/dd/yyyy" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+      </div>
+    </div>
+    <div class="form-group col-sm-3">
+      <label class="control-label col-sm-3" for="email">To:</label>
+      <div class='input-group date col-sm-9' id='datetimepicker2'>
+          <input type='text' class="form-control" placeholder="mm/dd/yyyy" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+      </div>
+    </div>
+    <div class="form-group col-sm-3" style="text-align: center;">
+      <button type="button" class="btn btn-success deviceSearchBtn">Search</button>
+      <button type="button" class="btn btn-primary deviceResetBtn">Reset</button>
+      <button type="button" class="btn btn-primary deviceExportBtn">Export</button>
+    </div>
+  </form>
+</div>
+<div class="deviceSection2 deviceSection">
+  <table-accord value="tableAccordObj2"></table-accord>
+</div>

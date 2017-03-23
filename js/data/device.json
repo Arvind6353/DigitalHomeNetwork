@@ -1,0 +1,151 @@
+[ {
+            "deviceName": "Motorola",
+            "deviceVendor": "Moto",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "30 Mbps",
+            "deviceAppCount": "5",
+            "deviceCategory": "GameConsole",
+            "loggedTime" : "02/12/2017 12:51 AM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Youtube", "data": "335", "unit":"MB" },                
+                {"name" : "Facebook", "data": "135", "unit":"MB" },                
+                {"name" : "Twitter", "data": "75", "unit":"MB" },                
+                {"name" : "Google", "data": "35", "unit":"MB" },                
+                {"name" : "Torrents", "data": "1350", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "HP System",
+            "deviceVendor": "HP",
+            "deviceIp": "10.12.11.42",
+            "bandwidth": "120 Mbps",
+            "deviceAppCount": "4",
+            "deviceCategory": "Mobile",
+            "loggedTime" : "03/10/2017 02:30 PM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Sulekha", "data": "415", "unit":"MB" },                
+                {"name" : "Facebook", "data": "140", "unit":"MB" },                
+                {"name" : "Flipkart", "data": "175", "unit":"MB" },                
+                {"name" : "IRCTC", "data": "50", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "Lenovo Z 132",
+            "deviceVendor": "Lenovo",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "130 Mbps",
+            "deviceAppCount": "5",
+            "deviceCategory": "CCTV",
+            "loggedTime" : "02/07/2017 09:10 AM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Magicbricks", "data": "233", "unit":"MB" },                
+                {"name" : "Amazon", "data": "315", "unit":"MB" },                
+                {"name" : "OLX", "data": "157", "unit":"MB" },                
+                {"name" : "Snapdeal", "data": "53", "unit":"MB" },                
+                {"name" : "Sulekha", "data": "880", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "Motorola",
+            "deviceVendor": "Moto",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "30 Mbps",
+            "deviceAppCount": "2",
+            "deviceCategory": "GameConsole",
+            "loggedTime" : "03/17/2017 11:45 PM",
+            "isConnected" : "Disconnect",
+            "application": [
+                {"name" : "Cardekho", "data": "835", "unit":"MB" },                
+                {"name" : "Bikedekho", "data": "35", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "HP System",
+            "deviceVendor": "HP",
+            "deviceIp": "10.12.11.42",
+            "bandwidth": "120 Mbps",
+            "deviceAppCount": "3",
+            "deviceCategory": "Mobile",
+            "loggedTime" : "02/27/2017 08:40 PM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Matrimony", "data": "205", "unit":"MB" },                
+                {"name" : "Naukri", "data": "405", "unit":"MB" },                
+                {"name" : "Timesjobs", "data": "95", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "Lenovo Z 132",
+            "deviceVendor": "Lenovo",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "130 Mbps",
+            "deviceAppCount": "5",
+            "deviceCategory": "CCTV",
+            "loggedTime" : "03/18/2017 07:55 AM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Flipkart", "data": "635", "unit":"MB" },                
+                {"name" : "IRCTC", "data": "135", "unit":"MB" },                
+                {"name" : "OLX", "data": "200", "unit":"MB" },                
+                {"name" : "Google", "data": "44", "unit":"MB" },                
+                {"name" : "Matrimony", "data": "250", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "Motorola",
+            "deviceVendor": "Moto",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "30 Mbps",
+            "deviceAppCount": "5",
+            "deviceCategory": "GameConsole",
+            "loggedTime" : "03/11/2017 06:20 AM",
+            "isConnected" : "Disconnect",
+            "application": [
+                {"name" : "Amazon", "data": "1335", "unit":"MB" },                
+                {"name" : "Makemytrip", "data": "300", "unit":"MB" },                
+                {"name" : "Twitter", "data": "200", "unit":"MB" },                
+                {"name" : "Magicbricks", "data": "100", "unit":"MB" },                
+                {"name" : "Paytm", "data": "150", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "HP System",
+            "deviceVendor": "HP",
+            "deviceIp": "10.12.11.42",
+            "bandwidth": "120 Mbps",
+            "deviceAppCount": "4",
+            "deviceCategory": "Mobile",
+            "loggedTime" : "03/25/2017 05:15 PM",
+            "isConnected" : "Disconnect",
+            "application": [
+                {"name" : "Redbus", "data": "300", "unit":"MB" },                
+                {"name" : "Amazon", "data": "135", "unit":"MB" },                
+                {"name" : "Snapdeal", "data": "66", "unit":"MB" },                
+                {"name" : "Google", "data": "89", "unit":"MB" }
+            ]
+        },{
+            "deviceName": "HP Laser Printer",
+            "deviceVendor": "HP",
+            "deviceIp": "10.12.11.34",
+            "bandwidth": "320 Mbps",
+            "deviceAppCount": "4",
+            "deviceCategory": "Mobile",
+            "loggedTime" : "03/22/2017 01:50 AM",
+            "isConnected" : "Disconnect",
+            "application": [
+                {"name" : "Ebay", "data": "533", "unit":"MB" },                
+                {"name" : "Facebook", "data": "935", "unit":"MB" },                
+                {"name" : "Cricketcountry", "data": "375", "unit":"MB" },                
+                {"name" : "Hotstar", "data": "535", "unit":"MB" }
+            ]
+        }, {
+            "deviceName": "Lenovo Z 132",
+            "deviceVendor": "Lenovo",
+            "deviceIp": "10.12.11.22",
+            "bandwidth": "130 Mbps",
+            "deviceAppCount": "3",
+            "deviceCategory": "CCTV",
+            "loggedTime" : "03/18/2017 3:30 PM",
+            "isConnected" : "Connected",
+            "application": [
+                {"name" : "Timesjobs", "data": "225", "unit":"MB" },                
+                {"name" : "Cardekho", "data": "995", "unit":"MB" },                
+                {"name" : "Flipkart", "data": "89", "unit":"MB" }
+            ]
+        }]
